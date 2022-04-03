@@ -1,15 +1,11 @@
--- Make a GET request to load a book called "Public Opinion"
---
--- Read how it works:
---   https://guide.elm-lang.org/effects/http.html
---
-
-
 module Main exposing (..)
 
-import Browser
-import Html exposing (Html, pre, text)
+import Browser exposing (element)
+import Html exposing (..)
+import Html.Attributes exposing (..)
+import Html.Events exposing (..)
 import Http
+import Json.Decode as Js exposing (Decoder, field, string, list, map3, map)
 
 
 
@@ -27,22 +23,44 @@ main =
 
 
 -- MODEL
+type alias Person
+    = {
+        firstName : String,
+        lastName : String,
+        prefName : String,
+        jobTitle : String,
+        department : String,
+        directReports : String,
+        division : String,
+        email : String,
+        location : String,
+        imgUrl : String,
+        reportsTo : String,
+        workPhone : String,
+        ext : String,
+        personalPhone : String,
+        id : String,
+        linkedInUrl : String,
+        twitterUrl : String,
+        facebookUrl : String,
+        instagramUrl : String,
+        timeOff : String,
+        timeOffIcon : String,
+        skype : String,
+        pinterest : String,
+        pronouns : String
+    }
 
 
 type Model
     = Failure
-    | Loading
-    | Success String
+        | Loading
+        | Success String
 
 
-init : () -> ( Model, Cmd Msg )
+init : () -> (Model, Cmd Msg)
 init _ =
-    ( Loading
-    , Http.get
-        { url = "http://localhost:9090/people.json"
-        , expect = Http.expectString GotText
-        }
-    )
+    (Loading, getRandomCatGif)
 
 
 
@@ -50,19 +68,23 @@ init _ =
 
 
 type Msg
-    = GotText (Result Http.Error String)
+    = MorePlease
+        | GotGif (Result Http.Error String)
 
 
-update : Msg -> Model -> ( Model, Cmd Msg )
+update : Msg -> Model -> (Model, Cmd Msg)
 update msg model =
     case msg of
-        GotText result ->
+        MorePlease ->
+            (Loading, getRandomCatGif)
+
+        GotGif result ->
             case result of
-                Ok fullText ->
-                    ( Success fullText, Cmd.none )
+                Ok url ->
+                    (Success url, Cmd.none)
 
                 Err _ ->
-                    ( Failure, Cmd.none )
+                    (Failure, Cmd.none)
 
 
 
@@ -80,12 +102,77 @@ subscriptions model =
 
 view : Model -> Html Msg
 view model =
+    div []
+        [ h2 [] [ text "Random Cats" ]
+        , viewGif model
+        ]
+
+
+viewGif : Model -> Html Msg
+viewGif model =
     case model of
         Failure ->
-            text "I was unable to load your book."
+            div []
+            [ text "I could not load a random cat for some reason. "
+            , button [ onClick MorePlease ] [ text "Try Again!" ]
+            ]
 
         Loading ->
             text "Loading..."
 
-        Success fullText ->
-            pre [] [ text fullText ]
+        Success url ->
+            div []
+            [ button [ onClick MorePlease, style "display" "block" ] [ text "More Please!" ]
+            , img [ src url ] []
+            ]
+
+
+
+-- HTTP
+
+
+getRandomCatGif : Cmd Msg
+getRandomCatGif =
+    Http.get
+        { url = "http://localhost:9090/people.json"
+        , expect = Http.expectJson GotGif gifDecoder
+        }
+
+
+gifDecoder : Decoder String
+gifDecoder =
+    Js.field "data" (Js.field "image_url" Js.string)
+
+personDecoder : Decoder Person
+personDecoder =
+    Js.map Person
+    (field "firstName" string)
+    (field "lastName" string)
+    (field "prefName" string)
+    (field "jobTitle" string)
+    (field "department" string)
+    (field "directReports" string)
+    (field "division" string)
+    (field "email" string)
+    (field "location" string)
+    (field "imgUrl" string)
+    (field "reportsTo" string)
+    (field "workPhone" string)
+    (field "ext" string)
+    (field "personalPhone" string)
+    (field "id" string)
+    (field "linkedInUrl" string)
+    (field "twitterUrl" string)
+    (field "facebookUrl" string)
+    (field "instagramUrl" string)
+    (field "timeOff" string)
+    (field "timeOffIcon" string)
+    (field "skype" string)
+    (field "pinterest" string)
+    (field "pronouns" string)
+
+
+
+personListDecoder : Decoder (List Person)
+personListDecoder =
+    Js.list personDecoder
