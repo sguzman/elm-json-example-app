@@ -1,56 +1,57 @@
 module Main exposing (..)
 
 import Browser
-import Html exposing (Html, text, div, h1, img)
+import Html exposing (Html, text, div, h1, h2, img, input)
 import Html.Attributes exposing (src)
-
+import Html.Events exposing (onInput)
+import Html.Attributes exposing (placeholder)
+import Html.Attributes exposing (value)
+import Json
 
 ---- MODEL ----
-
-
 type alias Model =
-    {}
+    {
+        content : String
+    }
 
-
-init : ( Model, Cmd Msg )
+init : Model
 init =
-    ( {}, Cmd.none )
-
-
+    {
+       content = ""
+    }
 
 ---- UPDATE ----
-
-
 type Msg
-    = NoOp
+    = Change String
 
-
-update : Msg -> Model -> ( Model, Cmd Msg )
+update : Msg -> Model -> Model
 update msg model =
-    ( model, Cmd.none )
-
-
+    case msg of
+        Change new ->
+            {
+                model | content = new
+            }
 
 ---- VIEW ----
-
-
 view : Model -> Html Msg
 view model =
     div []
-        [ img [ src "/logo.svg" ] []
-        , h1 [] [ text "Your Elm App is working!" ]
+        [
+         img [ src "/logo.svg" ] [],
+         h1 [] [ text "Your Elm App is working. Yay!" ],
+         h2 [] [ text ("Welcome, Mr " ++ model.content) ],
+         input [
+              placeholder "enter name here",
+              value model.content,
+              onInput Change
+         ] []
         ]
 
-
-
 ---- PROGRAM ----
-
-
 main : Program () Model Msg
 main =
-    Browser.element
+    Browser.sandbox
         { view = view
-        , init = \_ -> init
+        , init = init
         , update = update
-        , subscriptions = always Sub.none
         }
