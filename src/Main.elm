@@ -98,8 +98,7 @@ view model =
             , value model.content
             , onInput Change
             ]
-            []
-        , button [ onClick get ] [] ]
+            [] ]
 
 
 
