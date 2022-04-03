@@ -19,7 +19,7 @@ get =
     Http.get
     { 
         url = jsonUrl,
-        expect = Http.expectJson Got
+        expect = Http.expectJson GotItems (Result Http.)
     }
 
 
