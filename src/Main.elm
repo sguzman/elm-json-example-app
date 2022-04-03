@@ -43,7 +43,7 @@ get =
             timeOffIcon = (D.field "timeOffIcon" D.string),
             skype = (D.field "skype" D.string),
             pinterest = (D.field "pinterest" D.string),
-            pronouns = (D.field "pronouns" D.string),
+            pronouns = (D.field "pronouns" D.string)
         }))
     }
 
