@@ -40,7 +40,8 @@ decode =
     (D.field "timeOffIcon" D.string),
     (D.field "skype" D.string),
     (D.field "pinterest" D.string),
-    (D.field "pronouns" D.string),
+    (D.field "pronouns" D.string))
+    )
 
 get : Cmd Payload
 get =
