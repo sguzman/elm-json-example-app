@@ -42,11 +42,6 @@ init =
 ---- UPDATE ----
 
 
-type Msg
-    = Change String
-    | NoOp
-
-
 update : Msg -> Model -> Model
 update msg model =
     case msg of
