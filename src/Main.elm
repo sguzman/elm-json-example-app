@@ -53,7 +53,7 @@ type alias Person = {
     skype: String,
     pinterest: String,
     pronouns: String
-}
+    }
 
 view : Model -> Html Msg
 view model =
