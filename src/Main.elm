@@ -15,8 +15,7 @@ jsonUrl =
 type Payload = GotItems (Result Http.Error (List Person))
 
 decode : Decoder (List Person)
-decode = (D.list (
-    (D.field "firstName" D.string),)
+decode = (D.list ((D.field "firstName" D.string),)
 
 get : Cmd Payload
 get =
