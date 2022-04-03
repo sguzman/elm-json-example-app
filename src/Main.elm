@@ -99,8 +99,7 @@ view model =
             , onInput Change
             ]
             []
-        , button [ onClick get ] []
-        ]
+        , button [ onClick get ] [] ]
 
 
 
