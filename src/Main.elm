@@ -12,7 +12,7 @@ jsonUrl : String
 jsonUrl =
     "http://127.0.0.1:9090/people.json"
 
-type Payload = GotItems (Result Http.Error (List Person))
+type Payload = GotItems (Result Http.Error (List String))
 
 decode : Decoder (List String)
 decode = (D.list ((D.field "firstName" D.string)))
