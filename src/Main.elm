@@ -8,7 +8,7 @@
 module Main exposing (..)
 
 import Browser
-import Html exposing (Html, pre, text)
+import Html exposing (Html, pre, text, te)
 import Http
 
 
