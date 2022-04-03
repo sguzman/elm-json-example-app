@@ -16,12 +16,12 @@ import Http
 
 
 main =
-  Browser.element
+    Browser.element
     { init = init
     , update = update
     , subscriptions = subscriptions
     , view = view
-    }
+}
 
 
 
