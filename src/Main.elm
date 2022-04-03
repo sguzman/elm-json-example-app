@@ -24,8 +24,7 @@ main =
 
 -- MODEL
 type Person
-    = {
-        firstName : String,
+    = {firstName : String,
         lastName : String,
         prefName : String,
         jobTitle : String,
