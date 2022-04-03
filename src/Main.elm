@@ -8,8 +8,7 @@ import Html.Events exposing (..)
 
 ---- MODEL ----
 type alias
-Model =
-    {
+Model = {
         content : String
     }
 
