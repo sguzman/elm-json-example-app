@@ -7,8 +7,8 @@ import Html.Events exposing (..)
 import Json.Decode exposing (Decoder, field, string)
 -- MODEL ----
 
-jsonFile : String
-jsonFile = "../.env/data/people.json"
+jsonUrl : String
+jsonUrl = "../.env/data/people.json"
 
 type alias Model = {
     content : String
