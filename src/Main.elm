@@ -45,11 +45,7 @@ init =
 update : Msg -> Model -> Model
 update msg model =
     case msg of
-        Change new ->
-            { model
-                | content = new
-            }
-        NoOp -> Debug.log (get)
+    
 
 
 
