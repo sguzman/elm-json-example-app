@@ -6,11 +6,7 @@ import Html.Attributes exposing (..)
 import Html.Events exposing (..)
 import Json.Decode exposing (Decoder, field, string)
 
-
-
 -- MODEL ----
-
-
 jsonUrl : String
 jsonUrl =
     "http://127.0.0.1:9090/people.json"
