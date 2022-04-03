@@ -14,6 +14,8 @@ jsonUrl =
 
 type Payload = GotItems (Result Http.Error (List Person))
 
+decode 
+
 get : Cmd Payload
 get =
     Http.get
