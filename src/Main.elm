@@ -87,5 +87,5 @@ view model =
         Loading ->
             text "Loading..."
 
-        Success fullText ->
+        Success list ->
             pre [] (List.map (\x -> x) list)
