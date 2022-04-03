@@ -141,7 +141,7 @@ getRandomCatGif =
 
 gifDecoder : Decoder String
 gifDecoder =
-    Js.field "data" (field "image_url" string)
+    Js.field "data" (Js.field "image_url" string)
 
 personDecoder : Decoder (List Person)
 personDecoder =
