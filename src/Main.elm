@@ -16,6 +16,7 @@ type Payload = GotItems (Result Http.Error (List Person))
 
 decode : Decoder List Person
 decode =
+()
     (D.field "firstName" D.string),
     (D.field "lastName" D.string),
     (D.field "prefName" D.string),
