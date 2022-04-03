@@ -43,7 +43,7 @@ type alias Person = {
     workPhone: Maybe String,
     ext: String,
     personalPhone: String,
-    id: String,
+    id: Int,
     linkedInUrl: String,
     twitterUrl: String,
     facebookUrl: String,
