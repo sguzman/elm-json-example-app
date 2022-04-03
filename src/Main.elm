@@ -47,7 +47,7 @@ update msg model =
     case msg of
         GotItems result ->
             case result of
-                Ok
+                Ok json ->
 
 
 
