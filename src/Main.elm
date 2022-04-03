@@ -1,5 +1,6 @@
 module Main exposing (..)
 
+import Browser
 import Browser.element
 import Html exposing (..)
 import Html.Attributes exposing (..)
