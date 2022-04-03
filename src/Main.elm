@@ -23,6 +23,7 @@ main =
 
 
 -- MODEL
+type Person
 
 
 type Model
