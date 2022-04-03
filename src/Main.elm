@@ -25,30 +25,30 @@ main =
 -- MODEL
 type Person
     = {
-    "firstName : 
-    "lastName : 
-    "prefName : 
-    "jobTitle : 
-    "department : 
-    "directReports : 
-    "division : 
-    "email : 
-    "location : 
-    "imgUrl : 
-    "reportsTo : 
-    "workPhone : 
-    "ext : 
-    "personalPhone : 
-    "id : 
-    "linkedInUrl : 
-    "twitterUrl : 
-    "facebookUrl : 
-    "instagramUrl : 
-    "timeOff : 
-    "timeOffIcon : 
-    "skype : 
-    "pinterest : 
-    "pronouns : 
+    "firstName : String,
+    "lastName : String,
+    "prefName : String,
+    "jobTitle : String,
+    "department : String,
+    "directReports : String,
+    "division : String,
+    "email : String,
+    "location : String,
+    "imgUrl : String,
+    "reportsTo : String,
+    "workPhone : String,
+    "ext : String,
+    "personalPhone : String,
+    "id : String,
+    "linkedInUrl : String,
+    "twitterUrl : String,
+    "facebookUrl : String,
+    "instagramUrl : String,
+    "timeOff : String,
+    "timeOffIcon : String,
+    "skype : String,
+    "pinterest : String,
+    "pronouns : String,
     }
 
 
