@@ -1,15 +1,9 @@
--- Make a GET request to load a book called "Public Opinion"
---
--- Read how it works:
---   https://guide.elm-lang.org/effects/http.html
---
-
-
-module Main exposing (..)
-
 import Browser
-import Html exposing (Html, pre, text, div)
+import Html exposing (..)
+import Html.Attributes exposing (..)
+import Html.Events exposing (..)
 import Http
+import Json.Decode exposing (Decoder, field, string)
 
 
 
@@ -17,12 +11,12 @@ import Http
 
 
 main =
-    Browser.element
-        { init = init
-        , update = update
-        , subscriptions = subscriptions
-        , view = view
-        }
+  Browser.element
+    { init = init
+    , update = update
+    , subscriptions = subscriptions
+    , view = view
+    }
 
 
 
@@ -30,19 +24,14 @@ main =
 
 
 type Model
-    = Failure
-    | Loading
-    | Success (List String)
+  = Failure
+  | Loading
+  | Success String
 
 
-init : () -> ( Model, Cmd Msg )
+init : () -> (Model, Cmd Msg)
 init _ =
-    ( Loading
-    , Http.get
-        { url = "http://localhost:9090/people.json"
-        , expect = Http.expectString GotText
-        }
-    )
+  (Loading, getRandomCatGif)
 
 
 
@@ -50,19 +39,23 @@ init _ =
 
 
 type Msg
-    = GotText (Result Http.Error (List String))
+  = MorePlease
+  | GotGif (Result Http.Error String)
 
 
-update : Msg -> Model -> ( Model, Cmd Msg )
+update : Msg -> Model -> (Model, Cmd Msg)
 update msg model =
-    case msg of
-        GotText result ->
-            case result of
-                Ok list ->
-                    ( Success list, Cmd.none )
+  case msg of
+    MorePlease ->
+      (Loading, getRandomCatGif)
 
-                Err _ ->
-                    ( Failure, Cmd.none )
+    GotGif result ->
+      case result of
+        Ok url ->
+          (Success url, Cmd.none)
+
+        Err _ ->
+          (Failure, Cmd.none)
 
 
 
@@ -71,7 +64,7 @@ update msg model =
 
 subscriptions : Model -> Sub Msg
 subscriptions model =
-    Sub.none
+  Sub.none
 
 
 
@@ -80,12 +73,43 @@ subscriptions model =
 
 view : Model -> Html Msg
 view model =
-    case model of
-        Failure ->
-            text "I was unable to load your book."
+  div []
+    [ h2 [] [ text "Random Cats" ]
+    , viewGif model
+    ]
 
-        Loading ->
-            text "Loading..."
 
-        Success list ->
-            div [] (List.map (\x -> pre [] [text x]) list)
+viewGif : Model -> Html Msg
+viewGif model =
+  case model of
+    Failure ->
+      div []
+        [ text "I could not load a random cat for some reason. "
+        , button [ onClick MorePlease ] [ text "Try Again!" ]
+        ]
+
+    Loading ->
+      text "Loading..."
+
+    Success url ->
+      div []
+        [ button [ onClick MorePlease, style "display" "block" ] [ text "More Please!" ]
+        , img [ src url ] []
+        ]
+
+
+
+-- HTTP
+
+
+getRandomCatGif : Cmd Msg
+getRandomCatGif =
+  Http.get
+    { url = "https://api.giphy.com/v1/gifs/random?api_key=dc6zaTOxFJmzC&tag=cat"
+    , expect = Http.expectJson GotGif gifDecoder
+    }
+
+
+gifDecoder : Decoder String
+gifDecoder =
+  field "data" (field "image_url" string)
