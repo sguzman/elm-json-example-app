@@ -107,7 +107,7 @@ viewGif model =
 getRandomCatGif : Cmd Msg
 getRandomCatGif =
     Http.get
-        { url = "http://"
+        { url = "http://localhost:90"
         , expect = Http.expectJson GotGif gifDecoder
         }
 
