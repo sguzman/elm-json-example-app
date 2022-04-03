@@ -39,7 +39,7 @@ view model =
             placeholder "enter name here",
             value model.content,
             onInput Change
-         ] []
+        ] []
         ]
 
 ---- PROGRAM ----
