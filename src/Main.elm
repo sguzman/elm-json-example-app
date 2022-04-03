@@ -99,7 +99,7 @@ view model =
             , onInput Change
             ]
             []
-        , print
+        , button []
         ]
 
 
