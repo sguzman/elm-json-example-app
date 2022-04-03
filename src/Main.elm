@@ -40,7 +40,7 @@ init _ =
     ( Loading
     , Http.get
         { url = "http://localhost:9090/people.json"
-        , expect = Http. GotText
+        , expect = Http.expectS GotText
         }
     )
 
