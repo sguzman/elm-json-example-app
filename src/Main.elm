@@ -1,7 +1,7 @@
 module Main exposing (..)
 
 import Browser
-import Http exposing (..)
+import Http
 import Html exposing (..)
 import Html.Attributes exposing (..)
 import Html.Events exposing (..)
