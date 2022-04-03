@@ -33,12 +33,12 @@ get =
 
 init : () -> (Model, Cmd Msg)
 init _ =
-  ( Loading
-  , Http.get
-      { url = "http://127.0.0.1:9090/people.json"
-      , expect = Http.expectString GotText
-      }
-  )
+    ( Loading
+    , Http.get
+        { url = "http://127.0.0.1:9090/people.json"
+        , expect = Http.expectString GotText
+        }
+)
 
 
 
