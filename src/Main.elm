@@ -143,6 +143,8 @@ gifDecoder : Decoder String
 gifDecoder =
     Js.field "data" (Js.field "image_url" Js.string)
 
+
+
 personListDecoder : Decoder (List Person)
 personListDecoder =
     Js.list personDecoder
