@@ -26,6 +26,7 @@ main =
 type Person
 
 
+
 type Model
     = Failure
         | Loading
