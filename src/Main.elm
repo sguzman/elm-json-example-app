@@ -33,9 +33,9 @@ view model =
     div []
         [
         img [ src "/logo.svg" ] [],
-         h1 [] [ text "Your Elm App is working. Yay!" ],
-         h2 [] [ text ("Welcome, Mr " ++ model.content) ],
-         input [
+        h1 [] [ text "Your Elm App is working. Yay!" ],
+        h2 [] [ text ("Welcome, Mr " ++ model.content) ],
+        input [
               placeholder "enter name here",
               value model.content,
               onInput Change
