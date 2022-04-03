@@ -58,10 +58,10 @@ update msg model =
         GotText result ->
             case result of
                 Ok fullText ->
-                (Success fullText, Cmd.none)
+                    (Success fullText, Cmd.none)
 
-                Err _ ->
-                (Failure, Cmd.none)
+                    Err _ ->
+                    (Failure, Cmd.none)
 
 
 
