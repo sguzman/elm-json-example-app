@@ -45,7 +45,9 @@ init =
 update : Msg -> Model -> Model
 update msg model =
     case msg of
-        GotItems result -> 
+        GotItems result ->
+        case result of
+            Ok
 
 
 
