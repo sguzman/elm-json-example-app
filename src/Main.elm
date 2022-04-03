@@ -31,7 +31,7 @@ update msg model =
 type alias Person = {
     firstName: String,
     lastName: String,
-    prefName: String,
+    prefName: Maybe String,
     jobTitle: String,
     department: String,
     directReports: List String,
