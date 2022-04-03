@@ -12,6 +12,11 @@ jsonUrl : String
 jsonUrl =
     "http://127.0.0.1:9090/people.json"
 
+
+type Model
+  = Failure
+  | Loading
+  | Success String
 type Msg = GotItems (Result Http.Error (List String))
 
 decode : Decoder (List String)
