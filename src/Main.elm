@@ -58,7 +58,7 @@ update msg model =
     case msg of
         GotText result ->
             case result of
-                Ok fullText ->
+                Ok list ->
                     ( Success fullText, Cmd.none )
 
                 Err _ ->
