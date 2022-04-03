@@ -29,7 +29,7 @@ update msg model =
 
 ---- VIEW ----
 type Person = {
-        firstName: String,
+    firstName: String,
     lastName: String,
     prefName: String,
     jobTitle: String,
