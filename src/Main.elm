@@ -14,7 +14,7 @@ jsonUrl =
 
 type Msg
     = GotBook (Result Http.Error String)
-    | GotItems (Result Http.Error (List Perom))
+    | GotItems (Result Http.Error (List Person))
 
 get =
     Http.get
