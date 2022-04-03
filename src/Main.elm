@@ -118,4 +118,4 @@ gifDecoder =
 
 personDecoder : Decoder (List Person)
 personDecoder =
-    list 
+    list Person
