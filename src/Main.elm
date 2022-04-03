@@ -12,11 +12,11 @@ import Json.Decode exposing (Decoder, field, string)
 
 main =
     Browser.element
-    { init = init
-    , update = update
-    , subscriptions = subscriptions
-    , view = view
-    }
+        { init = init
+        , update = update
+        , subscriptions = subscriptions
+        , view = view
+        }
 
 
 
