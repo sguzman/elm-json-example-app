@@ -28,7 +28,7 @@ update msg model =
             }
 
 ---- VIEW ----
-type Person
+type person
 
 view : Model -> Html Msg
 view model =
