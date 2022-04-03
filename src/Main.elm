@@ -49,7 +49,7 @@ type alias Person
         skype : String,
         pinterest : String,
         pronouns : String
-        }
+    }
 
 
 type Model
