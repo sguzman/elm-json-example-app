@@ -146,7 +146,7 @@ gifDecoder =
 personDecoder : Decoder Person
 personDecoder =
     Js.map3 Person
-        "firstName": "Jacqueline",
+    "firstName": "Jacqueline",
     "lastName": "Aceves",
     "prefName": null,
     "jobTitle": "Special Education Teacher",
