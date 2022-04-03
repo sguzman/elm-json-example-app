@@ -32,11 +32,6 @@ get =
     }
 
 
-type alias Model =
-    { content : String
-    }
-
-
 init : Model
 init =
     { content = ""
