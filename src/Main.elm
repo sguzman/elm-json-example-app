@@ -4,7 +4,7 @@ import Browser
 import Html exposing (..)
 import Html.Attributes exposing (..)
 import Html.Events exposing (..)
-import Json
+import Json.Decode exposing (Decoder, field, string)
 -- MODEL ----
 
 jsonFile : String
