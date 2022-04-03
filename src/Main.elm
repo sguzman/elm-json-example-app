@@ -50,7 +50,7 @@ init _ =
 
 
 type Msg
-    = GotText (Result Http.Error String)
+    = GotText (Result Http.Error (List String))
 
 
 update : Msg -> Model -> ( Model, Cmd Msg )
