@@ -44,7 +44,7 @@ init =
 
 type Msg
     = Change String
-    | Cmd No
+    | Cmd.none
 
 
 update : Msg -> Model -> Model
