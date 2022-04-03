@@ -20,7 +20,7 @@ init = {
 type Msg
     = Change String
 
-update :Msg ->
+update : Msg ->
 Model ->
 Model
 update msg model =
