@@ -17,11 +17,11 @@ import Http
 
 main =
     Browser.element
-    { init = init
-    , update = update
-    , subscriptions = subscriptions
-    , view = view
-}
+        { init = init
+        , update = update
+        , subscriptions = subscriptions
+        , view = view
+    }
 
 
 
