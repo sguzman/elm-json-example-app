@@ -54,7 +54,7 @@ update msg model =
             { model
                 | content = new
             }
-        NoOp -> Debug.log
+        NoOp -> Debug.log 
 
 
 
