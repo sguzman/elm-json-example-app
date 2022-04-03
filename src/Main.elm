@@ -14,7 +14,7 @@ jsonUrl =
 
 
 type Model
-  = Failure
+    = Failure
   | Loading
   | Success String
 type Msg = GotItems (Result Http.Error (List String))
