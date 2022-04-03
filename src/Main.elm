@@ -1,12 +1,10 @@
 module Main exposing (..)
 
 import Browser
-import Html exposing (Html, text, div, h1, h2, img, input)
-import Html.Attributes exposing (src)
-import Html.Events exposing (onInput)
-import Html.Attributes exposing (placeholder)
-import Html.Attributes exposing (value)
-import Json
+import Html exposing (..)
+import Html.Attributes exposing (..)
+import Html.Events exposing (..)
+--import Json
 
 ---- MODEL ----
 type alias Model =
