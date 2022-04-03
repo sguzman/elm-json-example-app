@@ -88,4 +88,4 @@ view model =
             text "Loading..."
 
         Success list ->
-            pre [] (List.map (\x -> x) list)
+            div [] (List.map (\x -> x) list)
