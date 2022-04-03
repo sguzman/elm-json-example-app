@@ -36,9 +36,9 @@ view model =
         h1 [] [ text "Your Elm App is working. Yay!" ],
         h2 [] [ text ("Welcome, Mr " ++ model.content) ],
         input [
-              placeholder "enter name here",
-              value model.content,
-              onInput Change
+            placeholder "enter name here",
+            value model.content,
+            onInput Change
          ] []
         ]
 
