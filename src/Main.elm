@@ -12,6 +12,10 @@ jsonUrl : String
 jsonUrl =
     "http://127.0.0.1:9090/people.json"
 
+type Msg
+  = GotBook (Result Http.Error String)
+  | GotItems (Result Http.Error (List String))
+
 get =
     Http.get
     { 
