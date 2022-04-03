@@ -17,29 +17,6 @@ type Payload = GotItems (Result Http.Error (List Person))
 decode : Decoder (List Person)
 decode = (D.list (
     (D.field "firstName" D.string),
-    (D.field "lastName" D.string),
-    (D.field "prefName" D.string),
-    (D.field "jobTitle" D.string),
-    (D.field "department" D.string),
-    (D.field "directReports" D.string),
-    (D.field "division" D.string),
-    (D.field "email" D.string),
-    (D.field "location" D.string),
-    (D.field "imgUrl" D.string),
-    (D.field "reportsTo" D.string),
-    (D.field "workPhone" D.string),
-    (D.field "ext" D.string),
-    (D.field "personalPhone" D.string),
-    (D.field "id" D.string),
-    (D.field "linkedInUrl" D.string),
-    (D.field "twitterUrl" D.string),
-    (D.field "facebookUrl" D.string),
-    (D.field "instagramUrl" D.string),
-    (D.field "timeOff" D.string),
-    (D.field "timeOffIcon" D.string),
-    (D.field "skype" D.string),
-    (D.field "pinterest" D.string),
-    (D.field "pronouns" D.string))
     )
 
 get : Cmd Payload
