@@ -4,10 +4,11 @@
 --   https://guide.elm-lang.org/effects/http.html
 --
 
+
 module Main exposing (..)
 
 import Browser
-import Html exposing (Html, text, pre)
+import Html exposing (Html, pre, text)
 import Http
 
 
@@ -21,7 +22,7 @@ main =
         , update = update
         , subscriptions = subscriptions
         , view = view
-    }
+        }
 
 
 
@@ -34,7 +35,7 @@ type Model
     | Success String
 
 
-init : () -> (Model, Cmd Msg)
+init : () -> ( Model, Cmd Msg )
 init _ =
     ( Loading
     , Http.get
@@ -52,16 +53,16 @@ type Msg
     = GotText (Result Http.Error String)
 
 
-update : Msg -> Model -> (Model, Cmd Msg)
+update : Msg -> Model -> ( Model, Cmd Msg )
 update msg model =
     case msg of
         GotText result ->
             case result of
                 Ok fullText ->
-                    (Success fullText, Cmd.none)
+                    ( Success fullText, Cmd.none )
 
                 Err _ ->
-                    (Failure, Cmd.none)
+                    ( Failure, Cmd.none )
 
 
 
