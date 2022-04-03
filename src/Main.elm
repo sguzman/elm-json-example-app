@@ -42,7 +42,7 @@ type alias Person = {
     reportsTo: Maybe String,
     workPhone: Maybe String,
     ext: Maybe String,
-    personalPhone: String,
+    personalPhone: Maybe String,
     id: Int,
     linkedInUrl: String,
     twitterUrl: String,
