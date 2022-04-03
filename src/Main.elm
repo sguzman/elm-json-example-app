@@ -106,7 +106,7 @@ viewGif model =
 
 getRandomCatGif : Cmd Msg
 getRandomCatGif =
-  Http.get
+    Http.get
     { url = "https://api.giphy.com/v1/gifs/random?api_key=dc6zaTOxFJmzC&tag=cat"
     , expect = Http.expectJson GotGif gifDecoder
     }
