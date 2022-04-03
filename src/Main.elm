@@ -45,13 +45,13 @@ type alias Person = {
     personalPhone: Maybe String,
     id: Int,
     linkedInUrl: Maybe String,
-    twitterUrl: String,
-    facebookUrl: String,
-    instagramUrl: String,
-    timeOff: String,
-    timeOffIcon: String,
-    skype: String,
-    pinterest: String,
+    twitterUrl: Mayber String,
+    facebookUrl: Mayber String,
+    instagramUrl: Mayber String,
+    timeOff: Mayber String,
+    timeOffIcon: Mayber String,
+    skype: Mayber String,
+    pinterest: Mayber String,
     pronouns: String
     }
 
