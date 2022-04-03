@@ -11,7 +11,7 @@ import Json.Decode exposing (Decoder, field, string)
 
 
 main =
-  Browser.element
+    Browser.element
     { init = init
     , update = update
     , subscriptions = subscriptions
