@@ -20,7 +20,7 @@ get =
     { 
         url = jsonUrl,
         expect = Http.expectJson GotItems (D.list (Person {
-            firstName = (field)
+            firstName = (D.field "firstName" )
         }))
     }
 
