@@ -34,7 +34,7 @@ type Person = {
     prefName: String,
     jobTitle: String,
     department: String,
-    directReports: String,
+    directReports: List[String,
     division: String,
     email: String,
     location: String,
