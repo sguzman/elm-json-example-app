@@ -11,7 +11,7 @@ jsonUrl : String
 jsonUrl =
     "http://127.0.0.1:9090/people.json"
 
-get 
+get = 
 
 
 type alias Model =
