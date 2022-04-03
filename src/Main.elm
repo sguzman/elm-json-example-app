@@ -34,7 +34,7 @@ type alias Person = {
     prefName: String,
     jobTitle: String,
     department: String,
-    directReports: List[String],
+    directReports: List String,
     division: String,
     email: String,
     location: String,
