@@ -48,16 +48,16 @@ type Msg
 update : Msg -> Model -> (Model, Cmd Msg)
 update msg model =
     case msg of
-    MorePlease ->
-        (Loading, getRandomCatGif)
+        MorePlease ->
+            (Loading, getRandomCatGif)
 
-    GotGif result ->
-        case result of
-        Ok url ->
-            (Success url, Cmd.none)
+        GotGif result ->
+            case result of
+            Ok url ->
+                (Success url, Cmd.none)
 
-        Err _ ->
-            (Failure, Cmd.none)
+            Err _ ->
+                (Failure, Cmd.none)
 
 
 
