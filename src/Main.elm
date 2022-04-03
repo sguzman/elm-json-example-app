@@ -118,4 +118,4 @@ gifDecoder =
 
 personDecoder : Decoder (List Person)
 personDecoder =
-    list (field "image_url" string)
+    list 
