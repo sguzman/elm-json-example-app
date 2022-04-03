@@ -9,8 +9,8 @@ import Html.Events exposing (..)
 ---- MODEL ----
 type alias
 Model = {
-        content : String
-    }
+    content : String
+}
 
 init : Model
 init =
