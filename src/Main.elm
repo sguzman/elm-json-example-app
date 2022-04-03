@@ -31,11 +31,14 @@ get =
         expect = Http.expectJson GotItems decode
     }
 
-
-init : Model
-init =
-    { content = ""
-    }
+init : () -> (Model, Cmd Msg)
+init _ =
+  ( Loading
+  , Http.get
+      { url = "https://elm-lang.org/assets/public-opinion.txt"
+      , expect = Http.expectString GotText
+      }
+  )
 
 
 
