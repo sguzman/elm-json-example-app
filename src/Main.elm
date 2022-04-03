@@ -53,11 +53,11 @@ update msg model =
 
         GotGif result ->
             case result of
-            Ok url ->
-                (Success url, Cmd.none)
+                Ok url ->
+                    (Success url, Cmd.none)
 
-            Err _ ->
-                (Failure, Cmd.none)
+                Err _ ->
+                    (Failure, Cmd.none)
 
 
 
