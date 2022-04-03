@@ -5,7 +5,7 @@ import Html exposing (..)
 import Html.Attributes exposing (..)
 import Html.Events exposing (..)
 import Json
- -- MODEL ----
+-- MODEL ----
 
 jsonFile : String
 jsonFile = "../.env/data/people.json"
