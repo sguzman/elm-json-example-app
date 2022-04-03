@@ -16,7 +16,7 @@ get =
     Http.get
     { 
         url = jsonUrl,
-        expect
+        expect = 
     }
 
 
