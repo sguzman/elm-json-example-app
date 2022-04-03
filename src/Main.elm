@@ -35,7 +35,7 @@ type alias Person = {
     jobTitle: String,
     department: String,
     directReports: List String,
-    division: String,
+    division: Maybe String,
     email: String,
     location: String,
     imgUrl: String,
