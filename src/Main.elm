@@ -41,7 +41,7 @@ type alias Person = {
     imgUrl: String,
     reportsTo: Maybe String,
     workPhone: Maybe String,
-    ext: String,
+    ext: Maybe String,
     personalPhone: String,
     id: Int,
     linkedInUrl: String,
