@@ -32,7 +32,7 @@ main =
 type Model
     = Failure
     | Loading
-    | Success String
+    | Success (list String)
 
 
 init : () -> ( Model, Cmd Msg )
