@@ -18,7 +18,7 @@ decode : Decoder (List String)
 decode =
     D.list ((D.field "firstName" D.string))
 
-get : Cmd Payload
+get : Cmd Msg
 get =
     Http.get
     { 
