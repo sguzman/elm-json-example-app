@@ -14,7 +14,7 @@ jsonUrl =
 get =
 Http.get
 { 
-    
+    url = jsonUrl
 }
 
 
