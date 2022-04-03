@@ -28,7 +28,7 @@ update msg model =
             }
 
 ---- VIEW ----
-type Person = {
+type alias Person = {
         firstName: String,
         lastName: String,
         prefName: String,
