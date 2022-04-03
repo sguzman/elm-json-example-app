@@ -22,8 +22,7 @@ get =
     Http.get
     { 
         url = jsonUrl,
-        expect = Http.expectJson GotItems (D.list (Person {
-        }))
+        expect = Http.expectJson GotItems ()
     }
 
 
