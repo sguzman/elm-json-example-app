@@ -29,7 +29,7 @@ update msg model =
 
 ---- VIEW ----
 type Person = {
-    
+    firstName : String
 }
 
 view : Model -> Html Msg
