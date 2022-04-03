@@ -116,6 +116,6 @@ gifDecoder : Decoder String
 gifDecoder =
     field "data" (field "image_url" string)
 
-personDecoder : Decoder String
+personDecoder : Decoder (List Person)
 personDecoder =
     field "data" (field "image_url" string)
