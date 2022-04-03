@@ -39,7 +39,7 @@ type alias Person = {
     email: String,
     location: String,
     imgUrl: String,
-    reportsTo: String,
+    reportsTo: Maybe String,
     workPhone: String,
     ext: String,
     personalPhone: String,
