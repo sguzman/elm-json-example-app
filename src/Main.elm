@@ -29,9 +29,9 @@ main =
 
 
 type Model
-  = Failure
-  | Loading
-  | Success String
+    = Failure
+    | Loading
+    | Success String
 
 
 init : () -> (Model, Cmd Msg)
