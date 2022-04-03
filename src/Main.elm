@@ -146,30 +146,30 @@ gifDecoder =
 personDecoder : Decoder Person
 personDecoder =
     Js.map3 Person
-    "firstName
-    "lastName
-    "prefName
-    "jobTitle
-    "department
-    "directReports
-    "division
-    "email
-    "location
-    "imgUrl
-    "reportsTo
-    "workPhone
-    "ext
-    "personalPhone
-    "id
-    "linkedInUrl
-    "twitterUrl
-    "facebookUrl
-    "instagramUrl
-    "timeOff
-    "timeOffIcon
-    "skype
-    "pinterest
-    "pronouns
+    firstName
+    lastName
+    prefName
+    jobTitle
+    department
+    directReports
+    division
+    email
+    location
+    imgUrl
+    reportsTo
+    workPhone
+    ext
+    personalPhone
+    id
+    linkedInUrl
+    twitterUrl
+    facebookUrl
+    instagramUrl
+    timeOff
+    timeOffIcon
+    skype
+    pinterest
+    pronouns
 
 
 
