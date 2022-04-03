@@ -12,8 +12,7 @@ type alias Model = {
     }
 
 init : Model
-init =
-    {
+init = {
        content = ""
     }
 
