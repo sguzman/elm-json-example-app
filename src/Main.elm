@@ -52,7 +52,7 @@ type alias Person = {
     timeOffIcon: Maybe String,
     skype: Maybe String,
     pinterest: Maybe String,
-    pronouns: String
+    pronouns: Maybe String
     }
 
 view : Model -> Html Msg
