@@ -19,3 +19,4 @@ node_modules
 .env/
 *.~undo-tree~
 *.log
+index.html
