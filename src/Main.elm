@@ -17,7 +17,7 @@ type Model
     = Failure
     | Loading
     | Success String
-type Msg = GotItems (Result Http.Error (List String))
+type Msg = GotItems (Result Http.Error String)
 
 decode : Decoder (List String)
 decode =
