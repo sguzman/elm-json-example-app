@@ -12,10 +12,10 @@ jsonUrl =
     "http://127.0.0.1:9090/people.json"
 
 get =
-Http.get
-{ 
-    url = jsonUrl
-}
+    Http.get
+    { 
+        url = jsonUrl
+    }
 
 
 type alias Model =
