@@ -145,7 +145,7 @@ gifDecoder =
 
 personDecoder : Decoder Person
 personDecoder =
-    Js.map3 Person
+    Js.map Person
     (field "firstName" string)
     (field "lastName" string)
     (field "prefName" string)
