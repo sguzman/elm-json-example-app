@@ -56,12 +56,12 @@ update : Msg -> Model -> (Model, Cmd Msg)
 update msg model =
     case msg of
         GotText result ->
-        case result of
-            Ok fullText ->
-            (Success fullText, Cmd.none)
+            case result of
+                Ok fullText ->
+                (Success fullText, Cmd.none)
 
-            Err _ ->
-            (Failure, Cmd.none)
+                Err _ ->
+                (Failure, Cmd.none)
 
 
 
