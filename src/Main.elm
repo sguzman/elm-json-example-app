@@ -23,7 +23,7 @@ main =
 
 
 -- MODEL
-type Person
+type alias Person
     = {
         firstName : String,
         lastName : String,
