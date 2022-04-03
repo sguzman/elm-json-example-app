@@ -83,18 +83,18 @@ view model =
 
 viewGif : Model -> Html Msg
 viewGif model =
-  case model of
+    case model of
     Failure ->
-      div []
+        div []
         [ text "I could not load a random cat for some reason. "
         , button [ onClick MorePlease ] [ text "Try Again!" ]
         ]
 
     Loading ->
-      text "Loading..."
+        text "Loading..."
 
     Success url ->
-      div []
+        div []
         [ button [ onClick MorePlease, style "display" "block" ] [ text "More Please!" ]
         , img [ src url ] []
         ]
