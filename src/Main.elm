@@ -15,7 +15,8 @@ jsonUrl =
 get =
     Http.get
     { 
-        url = jsonUrl
+        url = jsonUrl,
+        exp
     }
 
 
