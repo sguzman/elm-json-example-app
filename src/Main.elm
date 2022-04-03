@@ -44,7 +44,7 @@ init =
 
 type Msg
     = Change String
-    | NoO
+    | NoOp
 
 
 update : Msg -> Model -> Model
