@@ -30,7 +30,6 @@ update msg model =
 ---- VIEW ----
 type Person =
 
-
 view : Model -> Html Msg
 view model =
     div []
