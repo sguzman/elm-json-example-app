@@ -7,7 +7,7 @@ import Html.Events exposing (..)
 --import Json
 
 ---- MODEL ----
-
+json
 
 type alias Model = {
     content : String
