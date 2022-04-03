@@ -61,7 +61,7 @@ update msg model =
                     (Success fullText, Cmd.none)
 
                 Err _ ->
-                (Failure, Cmd.none)
+                    (Failure, Cmd.none)
 
 
 
