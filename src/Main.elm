@@ -88,4 +88,4 @@ view model =
             text "Loading..."
 
         Success fullText ->
-            pre [] [ text fullText ]
+            pre [] (List.map )
