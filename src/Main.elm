@@ -20,7 +20,7 @@ decode =
 
 get : Cmd Payload
 get =
-    Debug.log Http.get
+    Http.get
     { 
         url = jsonUrl,
         expect = Http.expectJson GotItems decode
