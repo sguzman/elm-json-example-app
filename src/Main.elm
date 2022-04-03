@@ -22,7 +22,8 @@ type Msg
 
 update :
 Msg ->
-Model -> Model
+Model ->
+Model
 update msg model =
     case msg of
         Change new ->
