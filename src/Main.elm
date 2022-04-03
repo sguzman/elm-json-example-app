@@ -18,7 +18,6 @@ decode : Decoder (List String)
 decode =
     D.list ((D.field "firstName" D.string))
 
-get
 get =
     Http.get
     { 
