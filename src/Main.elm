@@ -59,7 +59,7 @@ update msg model =
         GotText result ->
             case result of
                 Ok list ->
-                    ( Success , Cmd.none )
+                    ( Success list, Cmd.none )
 
                 Err _ ->
                     ( Failure, Cmd.none )
