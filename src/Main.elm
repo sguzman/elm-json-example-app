@@ -42,7 +42,7 @@ init _ =
 
 type Msg
     = MorePlease
-    | GotGif (Result Http.Error String)
+        | GotGif (Result Http.Error String)
 
 
 update : Msg -> Model -> (Model, Cmd Msg)
