@@ -48,8 +48,8 @@ type alias Person
         timeOffIcon : String,
         skype : String,
         pinterest : String,
-        pronouns : String,
-    }
+        pronouns : String
+        }
 
 
 type Model
