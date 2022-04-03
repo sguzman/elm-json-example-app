@@ -52,7 +52,7 @@ type Person = {
     timeOffIcon: String,
     skype: String,
     pinterest: String,
-    pronouns: Stringl
+    pronouns: String
 }
 
 view : Model -> Html Msg
