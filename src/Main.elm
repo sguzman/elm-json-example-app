@@ -48,6 +48,7 @@ update msg model =
         GotItems result ->
             case result of
                 Ok json ->
+                    (Success)
 
 
 
