@@ -145,7 +145,7 @@ gifDecoder =
 
 personDecoder : Decoder Person
 personDecoder =
-    
+    Js.map3
 
 
 personListDecoder : Decoder (List Person)
