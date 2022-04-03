@@ -44,7 +44,7 @@ type alias Person = {
     ext: Maybe String,
     personalPhone: Maybe String,
     id: Int,
-    linkedInUrl: String,
+    linkedInUrl: Maybe String,
     twitterUrl: String,
     facebookUrl: String,
     instagramUrl: String,
