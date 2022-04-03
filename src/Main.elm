@@ -13,8 +13,8 @@ type alias Model = {
 
 init : Model
 init = {
-       content = ""
-    }
+    content = ""
+}
 
 ---- UPDATE ----
 type Msg
