@@ -35,7 +35,7 @@ init : () -> (Model, Cmd Msg)
 init _ =
   ( Loading
   , Http.get
-      { url = "https://elm-lang.org/assets/public-opinion.txt"
+      { url = "http://127.0.0.1:9090/people.json"
       , expect = Http.expectString GotText
       }
   )
