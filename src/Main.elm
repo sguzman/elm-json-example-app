@@ -145,4 +145,4 @@ gifDecoder =
 
 personDecoder : Decoder (List Person)
 personDecoder =
-    list Person
+    Js.list Person
