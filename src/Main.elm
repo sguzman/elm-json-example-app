@@ -146,5 +146,4 @@ gifDecoder =
 personListDecoder : Decoder (List Person)
 personListDecoder =
     Js.list {
-
     }
