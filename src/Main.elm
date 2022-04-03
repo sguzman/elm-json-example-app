@@ -7,6 +7,8 @@ import Html.Events exposing (..)
 --import Json
 
 ---- MODEL ----
+
+jsonFile : String
 jsonFile = "../.env/data/people.json"
 
 type alias Model = {
