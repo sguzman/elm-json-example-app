@@ -45,7 +45,7 @@ init _ =
 ---- UPDATE ----
 subscriptions : Model -> Sub Msg
 subscriptions model =
-  Sub.none
+    Sub.none
 
 update : Msg -> Model -> Model
 update msg model =
