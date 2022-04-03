@@ -22,7 +22,7 @@ get =
     Http.get
     { 
         url = jsonUrl,
-        expect = Http.expectJson GotItems 
+        expect = Http.expectJson GotItems decode
     }
 
 
