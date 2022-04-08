@@ -6,8 +6,6 @@ import Html.Attributes exposing (src)
 
 
 ---- MODEL ----
-
-
 type alias Model =
     {}
 
